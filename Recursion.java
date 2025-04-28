@@ -1,7 +1,4 @@
 
-import java.util.Scanner;
-
-//print n number in reaves//
 
 // import java.util.Scanner;
 
@@ -153,4 +150,17 @@ import java.util.Scanner;
 //     }
 // }
 
+//sum in array//
 
+public class Recursion {
+        public static void main(String[] args) {
+        //    Scanner s = new Scanner(System.in);
+           int[] n = {1,4,3,2};
+           int b = Sum(n, 0);
+           System.out.println(b);
+        }
+        public static int Sum(int n [], int index){
+            if (index == n.length) return 0;
+            return n[index] + Sum(n, index + 1);
+        }
+    }
