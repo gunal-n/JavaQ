@@ -113,23 +113,25 @@
 //     }
 // }
 
-//second larger // 
+//second larger number in array // 
 
-class array1{
-    public static void main(String[] args) {
-        int[] arr = {10, 20, 300, 40, 70};
-        int larger = arr[0];
-        int sec = arr[1];
-        for(int i = 0; i < arr.length ; i++){
-            if(arr[i] > larger){
-                sec = larger;
-                larger = arr[i];
-            }
-            else if (arr[i] > sec && arr[i] != larger) {
-                sec = arr[i];
-            }
-        }
-        System.out.println(larger);
-        System.out.print(sec);
-    }
-}
+// class array1{
+//     public static void main(String[] args) {
+//         int[] arr = {10, 20, 30, 4, 70};
+//         int larger = Integer.MIN_VALUE;
+//         int sec = Integer.MIN_VALUE;
+//         for(int i = 0; i < arr.length ; i++){
+//             if(arr[i] > larger){
+//                 sec = larger;
+//                 larger = arr[i];
+//             }
+//             else if ( arr[i] > sec && arr[i] != larger) {
+//                 sec = arr[i];
+//             }
+//         }
+//         System.out.println(larger);
+//         System.out.print(sec);
+//     }
+// }
+
+// 
