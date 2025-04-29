@@ -1,6 +1,3 @@
-import java.util.Scanner;
-
-// max number in array // 
 
 // public class array1 {
 //     public static void main(String[] args) {
@@ -82,6 +79,57 @@ import java.util.Scanner;
 //     }
 // }
 
+//Sum of right side element//
 
+// class array1{
+//     public static void main(String[] args) {
+//         int[] arr = {10, 20, 30, 40};
+//         int sum = 0;
+//         for(int i = arr.length - 1; i >= 0; i--){
+//             int temp = arr[i];
+//             arr[i] = sum;
+//             sum = sum + temp;
+//         }
+//         for(int i = 0; i < arr.length; i++){
+//             System.out.print(arr[i] +" ");
+//         }
+//     }
+// }
 
+//Sum of left side element//
 
+// class array1{
+//     public static void main(String[] args) {
+//         int[] arr = {10, 20, 30, 40};
+//         int sum = 0;
+//         for(int i = 0; i < arr.length ; i++){
+//             int temp = arr[i];
+//             arr[i] = sum;
+//             sum = sum + temp;
+//         }
+//         for(int i = 0; i < arr.length; i++){
+//             System.out.print(arr[i] +" ");
+//         }
+//     }
+// }
+
+//second larger // 
+
+class array1{
+    public static void main(String[] args) {
+        int[] arr = {10, 20, 300, 40, 70};
+        int larger = arr[0];
+        int sec = arr[1];
+        for(int i = 0; i < arr.length ; i++){
+            if(arr[i] > larger){
+                sec = larger;
+                larger = arr[i];
+            }
+            else if (arr[i] > sec && arr[i] != larger) {
+                sec = arr[i];
+            }
+        }
+        System.out.println(larger);
+        System.out.print(sec);
+    }
+}
