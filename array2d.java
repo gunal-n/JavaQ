@@ -1,4 +1,4 @@
-import java.util.Scanner;
+// import java.util.Scanner;
 // public class array2d {
 //     public static void main(String[] args) {
 //         Scanner s = new Scanner(System.in);
@@ -201,48 +201,48 @@ import java.util.Scanner;
 
 //zigzag travels//
 
-public class array2d {
-    public static void main(String[] args)
-    {
-        Scanner s = new Scanner(System.in);
-        int n = s.nextInt();
-        int m = s.nextInt();
-        int[][] arr = new int[n][m];
+// public class array2d {
+//     public static void main(String[] args)
+//     {
+//         Scanner s = new Scanner(System.in);
+//         int n = s.nextInt();
+//         int m = s.nextInt();
+//         int[][] arr = new int[n][m];
         
-        for(int i = 0; i < n; i++)
-        {
-            for(int j = 0; j < m; j++)
-            {
-                arr[i][j] = s.nextInt();
-            }
-        }
-        System.out.println("Show elements");
-        for(int i = 0; i < n; i++)
-        {
-            for(int j = 0; j < m; j++)
-            {
-                System.out.print(arr[i][j] + " ");
-            }
-            System.out.println();
-        }
-        System.out.println("zigzag");
-        for(int i = 0; i < n; i++)
-        {
-                if(i % 2 == 0)
-                {
-                   for(int j = 0; j < m; j++)
-                   {
-                   System.out.print(arr[i][j] + " ");
-                   }
-                }
-                else
-                {
-                    for(int j = m-1; j >= 0; j--)
-                    {
-                        System.out.print(arr[i][j] + " ");
-                    }
-                }
-        }
+//         for(int i = 0; i < n; i++)
+//         {
+//             for(int j = 0; j < m; j++)
+//             {
+//                 arr[i][j] = s.nextInt();
+//             }
+//         }
+//         System.out.println("Show elements");
+//         for(int i = 0; i < n; i++)
+//         {
+//             for(int j = 0; j < m; j++)
+//             {
+//                 System.out.print(arr[i][j] + " ");
+//             }
+//             System.out.println();
+//         }
+//         System.out.println("zigzag");
+//         for(int i = 0; i < n; i++)
+//         {
+//                 if(i % 2 == 0)
+//                 {
+//                    for(int j = 0; j < m; j++)
+//                    {
+//                    System.out.print(arr[i][j] + " ");
+//                    }
+//                 }
+//                 else
+//                 {
+//                     for(int j = m-1; j >= 0; j--)
+//                     {
+//                         System.out.print(arr[i][j] + " ");
+//                     }
+//                 }
+//         }
         
-    }
-}
+//     }
+// }
