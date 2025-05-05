@@ -40,8 +40,47 @@ import java.util.Scanner;
 //     }
 // }
 
-//User input//
+//User input by loop//
 
+
+// class Node{
+//     int data;
+//     Node next;
+//     Node(int data){
+//         this.data = data;
+//         this.next = null;
+//     }
+// }
+
+// class SLL{
+//    Node head;
+//    void insert(int data){
+//       Node newnode = new Node(data);
+//       newnode.next = head;
+//       head = newnode;
+//    }
+//    void display(){
+//      Node temp = head;
+//      while(temp != null){
+//         System.out.println(temp.data + " ");
+//         temp = temp.next;
+//      }
+//    }
+// }
+
+// public class linkedlist {
+//     public static void main(String[] args) {
+//         SLL list = new SLL();
+//         Scanner s = new Scanner(System.in);
+//         int n = s.nextInt();
+//         for(int i = 1; i <= n; i++){
+//             list.insert(i);
+//         }
+//         list.display();
+//     }
+// }
+
+//user input element//
 
 class Node{
     int data;
@@ -73,8 +112,12 @@ public class linkedlist {
         SLL list = new SLL();
         Scanner s = new Scanner(System.in);
         int n = s.nextInt();
-        for(int i = 1; i <= n; i++){
-            list.insert(i);
+        int[] arr = new int[n];
+        for(int i = 0; i < n; i++){
+            arr[i] = s.nextInt();
+        }
+        for(int i = 0; i < n; i++){
+            list.insert(arr[i]);
         }
         list.display();
     }
