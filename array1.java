@@ -134,4 +134,87 @@
 //     }
 // }
 
-// 
+// Array reavising//
+
+// import java.util.Scanner;
+
+// class array1 {
+//     public static void main(String[] args) {
+//         Scanner s = new Scanner(System.in);
+
+//         System.out.print("Enter number of elements: ");
+//         int n = s.nextInt();
+
+//         int[] arr = new int[n];
+
+//         System.out.println("Enter " + n + " elements:");
+//         for(int i = 0; i < n; i++) {
+//             arr[i] = s.nextInt();
+//         }
+
+//         System.out.println("Reversed array:");
+//         for(int i = n - 1; i >= 0; i--) {
+//             System.out.print(arr[i] + " ");
+//         }
+//     }
+// }
+
+//element array reves//
+
+// import java.util.Scanner;
+
+// class array1 {
+//     public static void main(String[] args) {
+//         Scanner s = new Scanner(System.in);
+
+//         System.out.print("Enter number of elements: ");
+//         int n = s.nextInt();
+
+//         int[] arr = new int[n];
+
+//         System.out.println("Enter " + n + " elements:");
+//         for(int i = 0; i < n; i++) {
+//             arr[i] = s.nextInt();
+//         }
+
+//         int start = 0;
+//         int end = n -1;
+//         while(start<end){
+//             int temp = arr[start];
+//             arr[start] = arr[end];
+//             arr[end] = temp;
+//             start++;
+//             end--;
+//         }
+        
+//         for(int i = 0; i < n; i++) {
+//            System.out.print(arr[i] + ""); 
+//         }
+
+//     }
+// }
+
+
+//Traget in array//
+// import java.util.*;
+// class array1{
+//     public static void main(String[] args) {
+//         Scanner s = new Scanner(System.in);
+
+//         System.out.print("Enter number of elements: ");
+//         int n = s.nextInt();
+
+//         int[] arr = new int[n];
+
+//         System.out.println("Enter " + n + " elements:");
+//         for(int i = 0; i < n; i++) {
+//             arr[i] = s.nextInt();
+//         } 
+        
+//         System.out.println("Taraget");
+//         int t = s.nextInt();
+
+
+
+//     }
+// }
