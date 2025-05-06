@@ -296,4 +296,62 @@
 // }
 // }
 
-//
+//MAX and MIN number //
+
+class Node{
+    int data;
+    Node next;
+    Node(int data){
+        this.data = data;
+        this.next = null;
+    }
+}
+
+class SLL{
+   Node head;
+   void insert(int data){
+      Node newnode = new Node(data);
+      newnode.next = head;
+      head = newnode;
+   }
+void Maxnumber() {
+    Node temp = head;
+    int Max = temp.data;
+    System.out.print("Maxnumber : ");
+    while (temp != null) {
+        if(Max < temp.data){
+            Max = temp.data;
+        }
+        temp = temp.next;
+    }
+    System.out.println(Max);
+}
+
+void Minnumber() {
+    Node temp = head;
+    int Min = temp.data;
+    System.out.print("Minnumber : ");
+    while (temp != null) {
+        if(Min > temp.data){
+            Min = temp.data;
+        }
+        temp = temp.next;
+    }
+    System.out.println(Min);
+}
+}
+
+public class linkedlist {
+        public static void main(String[] args) {
+    SLL list = new SLL();
+    list.insert(10);
+    list.insert(20);
+    list.insert(30);
+    list.insert(40);
+    list.insert(50);
+    list.insert(1);
+    list.insert(500);
+    list.Maxnumber();
+    list.Minnumber();   
+}
+}
