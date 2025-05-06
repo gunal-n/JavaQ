@@ -162,46 +162,138 @@
 
 //sum of element in linked list
 
-class Node{
-    int data;
-    Node next;
-    Node(int data){
-        this.data = data;
-        this.next = null;
-    }
-}
+// class Node{
+//     int data;
+//     Node next;
+//     Node(int data){
+//         this.data = data;
+//         this.next = null;
+//     }
+// }
 
-class SLL{
-   Node head;
-   void insert(int data){
-      Node newnode = new Node(data);
-      newnode.next = head;
-      head = newnode;
-   }
-   void display(){
-    Node temp = head;
-    while(temp )
-   }
-   int sum = 0;
-   void sum(){
-     Node temp = head;
-     while(temp != null){
-        sum += temp.data;
-        temp = temp.next;
-     }
-     System.out.println(sum);
-   }
-}
+// class SLL{
+//    Node head;
+//    void insert(int data){
+//       Node newnode = new Node(data);
+//       newnode.next = head;
+//       head = newnode;
+//    }
+//    void display(){
+//     Node temp = head;
+//     while(temp != null){
+//         System.out.println(temp.data + " ");
+//         temp = temp.next;
+//     }
+//    }
+//    int sum = 0;
+//    void sum(){
+//      Node temp = head;
+//      while(temp != null){
+//         sum += temp.data;
+//         temp = temp.next;
+//      }
+//      System.out.println(sum);
+//    }
+// }
 
-public class linkedlist {
-        public static void main(String[] args) {
-    SLL list = new SLL();
-    list.insert(10);
-    list.insert(20);
-    list.insert(30);
-    list.insert(40);
-    list.insert(50);
-    list.sum();
-}
+// public class linkedlist {
+//         public static void main(String[] args) {
+//     SLL list = new SLL();
+//     list.insert(10);
+//     list.insert(20);
+//     list.insert(30);
+//     list.insert(40);
+//     list.insert(50);
+//     list.sum();
+//     list.display();
+// }
  
-}
+// }
+
+//count element above the 10 valu count it
+
+// class Node{
+//     int data;
+//     Node next;
+//     Node(int data){
+//         this.data = data;
+//         this.next = null;
+//     }
+// }
+
+// class SLL{
+//    Node head;
+//    void insert(int data){
+//       Node newnode = new Node(data);
+//       newnode.next = head;
+//       head = newnode;
+//    }
+//    int abovevcount = 0;
+//    void abovevcount(){
+//      Node temp = head;
+//      while(temp != null){
+//         if(temp.data > 10){
+//             abovevcount++;
+//         }
+//         temp = temp.next;
+//      }
+//      System.out.println(abovevcount);
+//    }
+// }
+
+// public class linkedlist {
+//         public static void main(String[] args) {
+//     SLL list = new SLL();
+//     list.insert(10);
+//     list.insert(20);
+//     list.insert(30);
+//     list.insert(40);
+//     list.insert(50);
+//     list.abovevcount();
+    
+// }
+ 
+// }
+
+//count element above the 10 valu count it by ternay operator
+
+// class Node{
+//     int data;
+//     Node next;
+//     Node(int data){
+//         this.data = data;
+//         this.next = null;
+//     }
+// }
+
+// class SLL{
+//    Node head;
+//    void insert(int data){
+//       Node newnode = new Node(data);
+//       newnode.next = head;
+//       head = newnode;
+//    }
+//    int abovevcount = 0;
+// void abovevcount() {
+//     Node temp = head;
+//     while (temp != null) {
+//         abovevcount += (temp.data > 10) ? 1 : 0;
+//         temp = temp.next;
+//     }
+//     System.out.println(abovevcount);
+// }
+// }
+
+// public class linkedlist {
+//         public static void main(String[] args) {
+//     SLL list = new SLL();
+//     list.insert(10);
+//     list.insert(20);
+//     list.insert(30);
+//     list.insert(40);
+//     list.insert(50);
+//     list.abovevcount();   
+// }
+// }
+
+//
