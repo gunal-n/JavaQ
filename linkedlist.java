@@ -356,4 +356,157 @@
 // }
 // }
 
-//
+//insert with position element//
+
+// class Node {
+//     int data;
+//     Node next;
+//     Node(int data){
+//         this.data = data;
+//         this.next = null;
+//     }
+// }
+
+// class SLL {
+//     Node head;
+
+//     // Insert at head
+//     void insert(int data) {
+//         Node newnode = new Node(data);
+//         newnode.next = head;
+//         head = newnode;
+//     }
+
+//     // Insert at a given position (0-based index)
+//     void position(int data, int pos) {
+//         Node newnode = new Node(data);
+
+//         // Insert at the beginning
+//         if (pos == 0) {
+//             newnode.next = head;
+//             head = newnode;
+//             return;
+//         }
+
+//         Node temp = head;
+//         for (int i = 0; i < pos - 1 && temp != null; i++) {
+//             temp = temp.next;
+//         }
+
+//         // If position is invalid (greater than length)
+//         if (temp == null) {
+//             System.out.println("Invalid position!");
+//             return;
+//         }
+
+//         newnode.next = temp.next;
+//         temp.next = newnode;
+//     }
+
+//     // Display the list
+//     void display() {
+//         Node temp = head;
+//         while (temp != null) {
+//             System.out.print(temp.data + " ");
+//             temp = temp.next;
+//         }
+//         System.out.println();
+//     }
+// }
+
+
+// public class linkedlist {
+//     public static void main(String[] args) {
+//         SLL list = new SLL();
+//         list.insert(10);
+//         list.insert(20);
+//         list.insert(30);
+//         list.insert(40);
+//         list.insert(50);
+//         list.display();
+//         list.position(25, 2);
+//         list.display();
+//     }
+// }
+
+
+// class Node {
+//     int data;
+//     Node next;
+//     Node(int data){
+//         this.data = data;
+//         this.next = null;
+//     }
+// }
+
+// class SLL {
+//     Node head;
+
+//     // Insert at end
+//     void insert(int data) {
+//         Node newnode = new Node(data);
+//         if (head == null) {
+//             head = newnode;
+//             return;
+//         }
+    
+//         Node temp = head;
+//         while (temp.next != null) {
+//             temp = temp.next;
+//         }
+    
+//         temp.next = newnode;
+//     }
+    
+
+//     // Insert at a given position (0-based index)
+//     void position(int data, int pos) {
+//         Node newnode = new Node(data);
+
+//         // Insert at the beginning
+//         if (pos == 0) {
+//             newnode.next = head;
+//             head = newnode;
+//             return;
+//         }
+
+//         Node temp = head;
+//         for (int i = 0; i < pos - 1 && temp != null; i++) {
+//             temp = temp.next;
+//         }
+
+//         // If position is invalid (greater than length)
+//         if (temp == null) {
+//             System.out.println("Invalid position!");
+//             return;
+//         }
+
+//         newnode.next = temp.next;
+//         temp.next = newnode;
+//     }
+
+//     // Display the list
+//     void display() {
+//         Node temp = head;
+//         while (temp != null) {
+//             System.out.print(temp.data + " ");
+//             temp = temp.next;
+//         }
+//         System.out.println();
+//     }
+// }
+
+
+// public class linkedlist {
+//     public static void main(String[] args) {
+//         SLL list = new SLL();
+//         list.insert(10);
+//         list.insert(20);
+//         list.insert(30);
+//         list.insert(40);
+//         list.insert(50);
+//         list.display();
+//         list.position(25, 2);
+//         list.display();
+//     }
+// }
