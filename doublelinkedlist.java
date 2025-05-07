@@ -10,7 +10,6 @@ class Node{
        this.prev = null;
     }
 }
-
 class DLL{
    Node head;
    Node tail;
