@@ -514,72 +514,72 @@
 //delete the element in linkedlist//
 
 
-class Node{
-    int data;
-    Node next;
-    Node(int data){
-       this.data = data;
-       this.next = null;
-    }
-}
+// class Node{
+//     int data;
+//     Node next;
+//     Node(int data){
+//        this.data = data;
+//        this.next = null;
+//     }
+// }
 
-class SLL{
-   Node head;
+// class SLL{
+//    Node head;
 
-   void insert(int data){
-       Node newnode = new Node(data);
-           newnode.next = head;
-           head = newnode;
-       }
+//    void insert(int data){
+//        Node newnode = new Node(data);
+//            newnode.next = head;
+//            head = newnode;
+//        }
 
-       void delete(int position) {
-           if (head == null) {
-               System.out.println("List is empty");
-               return;
-           }
+//        void delete(int position) {
+//            if (head == null) {
+//                System.out.println("List is empty");
+//                return;
+//            }
    
-           if (position == 0) {
-               head = head.next;
-               return;
-           }
+//            if (position == 0) {
+//                head = head.next;
+//                return;
+//            }
    
-           Node temp = head;
-           for (int i = 0; i < position - 1 && temp != null; i++) {
-               temp = temp.next;
-           }
+//            Node temp = head;
+//            for (int i = 0; i < position - 1 && temp != null; i++) {
+//                temp = temp.next;
+//            }
    
-           if (temp == null || temp.next == null) {
-               System.out.println("Position out of bounds");
-               return;
-           }
+//            if (temp == null || temp.next == null) {
+//                System.out.println("Position out of bounds");
+//                return;
+//            }
    
-           temp.next = temp.next.next;
-       }
+//            temp.next = temp.next.next;
+//        }
 
-   void display(){
-       Node temp = head;
-       while(temp != null){
-           System.out.print(temp.data + " ");
-           temp = temp.next;
-       }
-       System.out.println();
-   }
+//    void display(){
+//        Node temp = head;
+//        while(temp != null){
+//            System.out.print(temp.data + " ");
+//            temp = temp.next;
+//        }
+//        System.out.println();
+//    }
 
-}
+// }
 
-public class linkedlist {
-   public static void main(String[] args) {
-       SLL list = new SLL();
-       list.insert(10);
-       list.insert(20);
-       list.insert(30);
-       list.insert(40);
-       list.insert(50);
-       list.display();
+// public class linkedlist {
+//    public static void main(String[] args) {
+//        SLL list = new SLL();
+//        list.insert(10);
+//        list.insert(20);
+//        list.insert(30);
+//        list.insert(40);
+//        list.insert(50);
+//        list.display();
 
-       list.delete(0);
-       list.delete(1);
-       list.delete(10);
-       list.display();
-   }
-}
+//        list.delete(0);
+//        list.delete(1);
+//        list.delete(10);
+//        list.display();
+//    }
+// }
