@@ -55,39 +55,39 @@
 
 //cba out as 2 not -2
 
-import java.util.Scanner;
+// import java.util.Scanner;
 
-public class microsoftq {
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
+// public class microsoftq {
+//     public static void main(String[] args) {
+//         Scanner scanner = new Scanner(System.in);
 
-        // Take string input from user
-        System.out.print("Enter a string: ");
-        String input = scanner.nextLine();
+//         // Take string input from user
+//         System.out.print("Enter a string: ");
+//         String input = scanner.nextLine();
 
-        int total = 0;
-        int length = input.length();
+//         int total = 0;
+//         int length = input.length();
 
-        // Loop through the string from both ends
-        for (int i = 0; i < length / 2; i++) {
-            char left = input.charAt(i);                      // character from start
-            char right = input.charAt(length - 1 - i);        // character from end
+//         // Loop through the string from both ends
+//         for (int i = 0; i < length / 2; i++) {
+//             char left = input.charAt(i);                      // character from start
+//             char right = input.charAt(length - 1 - i);        // character from end
 
-            // Calculate positive difference
-            int diff = right - left;
-            if (diff < 0) {
-                diff = -diff;  // Make the difference positive
-            }
+//             // Calculate positive difference
+//             int diff = right - left;
+//             if (diff < 0) {
+//                 diff = -diff;  // Make the difference positive
+//             }
 
-            total += diff;                                    // add difference to total
+//             total += diff;                                    // add difference to total
 
-            // Print the difference for each pair (optional)
-            System.out.println("Pair: '" + left + "' and '" + right + "' → Difference: " + diff);
-        }
+//             // Print the difference for each pair (optional)
+//             System.out.println("Pair: '" + left + "' and '" + right + "' → Difference: " + diff);
+//         }
 
-        // Final total
-        System.out.println("Total sum of differences: " + total);
+//         // Final total
+//         System.out.println("Total sum of differences: " + total);
 
-        scanner.close();
-    }
-}
+//         scanner.close();
+//     }
+// }
