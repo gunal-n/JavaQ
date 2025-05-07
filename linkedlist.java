@@ -567,7 +567,7 @@ class SLL{
 
 }
 
-public class a {
+public class linkedlist {
    public static void main(String[] args) {
        SLL list = new SLL();
        list.insert(10);
