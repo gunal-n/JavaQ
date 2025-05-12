@@ -205,3 +205,30 @@
 //         }
 //     }
 // }
+
+//1
+//2 6
+//3 7 10
+//4 8 11 13
+//5 9 12 14 15
+
+import java.util.Scanner;
+
+ class patten {
+    public static void main(String[] args) {
+        Scanner s = new Scanner(System.in);
+        System.out.print("Enter the size: ");
+        int a = s.nextInt();
+
+        for (int i = 1; i <= a; i++) {
+            int num = i;
+            int diff = a - 1;
+            for (int j = 1; j <= i; j++) {
+                    System.out.print(num + " ");
+                    num = num + diff;
+                    diff--;
+                }
+                System.out.println();
+        }
+    } 
+}
