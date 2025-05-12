@@ -584,3 +584,22 @@
 //    }
 // }
 
+//call the linked list in famework//
+// import java.util.LinkedList;
+// import java.util.List;
+
+// class linkedlist {
+//     public static void main(String[] args) {
+//         List<Integer> list = new LinkedList<>();
+//         list.add(10);
+//         list.add(20);
+//         list.addFirst(30);
+//         list.addLast(50);
+//         list.set(0, 100);
+
+//         // Display the elements in the list
+//         for (int num : list) {
+//             System.out.println(num);
+//         }
+//     }
+// }
