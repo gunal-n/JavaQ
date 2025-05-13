@@ -90,86 +90,124 @@
 
 //Stach linkedlist//
 // Node class
-class Node {
-    int data;
-    Node next;
+// class Node {
+//     int data;
+//     Node next;
 
-    Node(int data) {
-        this.data = data;
-        this.next = null;
-    }
-}
+//     Node(int data) {
+//         this.data = data;
+//         this.next = null;
+//     }
+// }
 
-// Stack using LinkedList
-class Stack {
-    Node top;
+// // Stack using LinkedList
+// class Stack {
+//     Node top;
 
-    // Constructor
-    Stack() {
-        this.top = null;
-    }
+//     // Constructor
+//     Stack() {
+//         this.top = null;
+//     }
 
-    // Push method
-    void push(int data) {
-        Node newNode = new Node(data);
-        newNode.next = top;
-        top = newNode;
-    }
+//     // Push method
+//     void push(int data) {
+//         Node newNode = new Node(data);
+//         newNode.next = top;
+//         top = newNode;
+//     }
 
-    // Pop method
-    int pop() {
-        if (top == null) {
-            System.out.println("Stack Underflow");
-            return -1;
-        }
-        int popped = top.data;
-        top = top.next;
-        return popped;
-    }
+//     // Pop method
+//     int pop() {
+//         if (top == null) {
+//             System.out.println("Stack Underflow");
+//             return -1;
+//         }
+//         int popped = top.data;
+//         top = top.next;
+//         return popped;
+//     }
 
-    // Peek method
-    int peek() {
-        if (top == null) {
-            System.out.println("Stack is empty");
-            return -1;
-        }
-        return top.data;
-    }
+//     // Peek method
+//     int peek() {
+//         if (top == null) {
+//             System.out.println("Stack is empty");
+//             return -1;
+//         }
+//         return top.data;
+//     }
 
-    // Check if stack is empty
-    boolean isEmpty() {
-        return top == null;
-    }
+//     // Check if stack is empty
+//     boolean isEmpty() {
+//         return top == null;
+//     }
 
-    // Print the stack
-    void printStack() {
-        if (top == null) {
-            System.out.println("Stack is empty");
-            return;
-        }
-        System.out.print("Stack: [");
-        Node current = top;
-        while (current != null) {
-            System.out.print(current.data);
-            if (current.next != null) System.out.print(", ");
-            current = current.next;
-        }
-        System.out.println("]");
-    }
-}
+//     // Print the stack
+//     void printStack() {
+//         if (top == null) {
+//             System.out.println("Stack is empty");
+//             return;
+//         }
+//         System.out.print("Stack: [");
+//         Node current = top;
+//         while (current != null) {
+//             System.out.print(current.data);
+//             if (current.next != null) System.out.print(", ");
+//             current = current.next;
+//         }
+//         System.out.println("]");
+//     }
+// }
+// public class Stackjava {
+//     public static void main(String[] args) {
+//         Stack st = new Stack();
+//         st.push(10);
+//         st.push(20);
+//         st.push(30);
+
+//         st.printStack();  // Stack: [30, 20, 10]
+
+//         System.out.println("Top element: " + st.peek()); // 30
+
+//         System.out.println("Popped: " + st.pop()); // 30
+//         st.printStack();  // Stack: [20, 10]
+//     }
+// }
+
+//682. Baseball Game leetcode//
+
+import java.util.Stack;
+
 public class Stackjava {
     public static void main(String[] args) {
-        Stack st = new Stack();
-        st.push(10);
-        st.push(20);
-        st.push(30);
+        Solution solution = new Solution();
 
-        st.printStack();  // Stack: [30, 20, 10]
+        // Example input
+        String[] operations = {"5", "2", "C", "D", "+"};
 
-        System.out.println("Top element: " + st.peek()); // 30
-
-        System.out.println("Popped: " + st.pop()); // 30
-        st.printStack();  // Stack: [20, 10]
+        // Call the method and print the result
+        int result = solution.calPoints(operations);
+        System.out.println("Total Score: " + result);
     }
 }
 
+class Solution {
+    public int calPoints(String[] operations) {
+        Stack<Integer> stack = new Stack<>();
+        for(String ops : operations){
+            if(ops.equals("+")){
+                int sum1 = stack.pop();
+                int sum2 = stack.peek();
+                stack.push(sum1);
+                stack.push(sum1 + sum2);
+            }
+            else if(ops.equals("D")) stack.push(stack.peek()*2);
+            else if(ops.equals("C")) stack.pop();
+            else {stack.push(Integer.valueOf(ops));}
+        }
+        int sum = 0;
+        while(!stack.isEmpty()){
+            sum += stack.pop();
+        }
+        return sum;
+    }
+}
