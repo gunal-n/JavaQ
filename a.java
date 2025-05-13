@@ -90,46 +90,46 @@
 //     }
 // }
 
-import java.util.Stack;
+// import java.util.Stack;
 
-public class a {
-    public static void main(String[] args) {
-        Solution solution = new Solution();
+// public class a {
+//     public static void main(String[] args) {
+//         Solution solution = new Solution();
 
-        // Example input
-        String[] operations = {"5", "2", "C", "D", "+"};
+//         // Example input
+//         String[] operations = {"5", "2", "C", "D", "+"};
 
-        // Call the method and print the result
-        int result = solution.calPoints(operations);
-        System.out.println("Total Score: " + result);
-    }
-}
+//         // Call the method and print the result
+//         int result = solution.calPoints(operations);
+//         System.out.println("Total Score: " + result);
+//     }
+// }
 
-class Solution {
-    public int calPoints(String[] operations){
-        Stack<Integer> stack = new Stack<>();
+// class Solution {
+//     public int calPoints(String[] operations){
+//         Stack<Integer> stack = new Stack<>();
 
-        for(String ops : operations){
-            if(ops.equals("+")){
-                int sum1 = stack.pop();
-                int sum2 = stack.peek();
-                stack.push(sum1);
-                stack.push(sum1 + sum2);
-        }
-        else if(ops.equals("C")){
-             stack.pop();
-        }
-        else if (ops.equals("D")){
-            stack.push(stack.peek()*2);
-        }
-        else{
-            stack.push(Integer.valueOf(ops));
-        }
-    }
-    int sum = 0;
-    while(!stack.isEmpty()){
-        sum += stack.pop();
-    }
-    return sum;
-    }
-}
+//         for(String ops : operations){
+//             if(ops.equals("+")){
+//                 int sum1 = stack.pop();
+//                 int sum2 = stack.peek();
+//                 stack.push(sum1);
+//                 stack.push(sum1 + sum2);
+//         }
+//         else if(ops.equals("C")){
+//              stack.pop();
+//         }
+//         else if (ops.equals("D")){
+//             stack.push(stack.peek()*2);
+//         }
+//         else{
+//             stack.push(Integer.valueOf(ops));
+//         }
+//     }
+//     int sum = 0;
+//     while(!stack.isEmpty()){
+//         sum += stack.pop();
+//     }
+//     return sum;
+//     }
+// }
