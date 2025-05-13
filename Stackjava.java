@@ -175,16 +175,67 @@
 
 //682. Baseball Game leetcode//
 
+// import java.util.Stack;
+
+// public class Stackjava {
+//     public static void main(String[] args) {
+//         Solution solution = new Solution();
+
+//         // Example input
+//         String[] operations = {"5", "2", "C", "D", "+"};
+
+//         // Call the method and print the result
+//         int result = solution.calPoints(operations);
+//         System.out.println("Total Score: " + result);
+//     }
+// }
+
+// class Solution {
+//     public int calPoints(String[] operations) {
+//         Stack<Integer> stack = new Stack<>();
+//         for(String ops : operations){
+//             if(ops.equals("+")){
+//                 int sum1 = stack.pop();
+//                 int sum2 = stack.peek();
+//                 stack.push(sum1);
+//                 stack.push(sum1 + sum2);
+//             }
+//             else if(ops.equals("D")) stack.push(stack.peek()*2);
+//             else if(ops.equals("C")) stack.pop();
+//             else {stack.push(Integer.valueOf(ops));}
+//         }
+//         int sum = 0;
+//         while(!stack.isEmpty()){
+//             sum += stack.pop();
+//         }
+//         return sum;
+//     }
+// }
+
+////682. Baseball Game leetcode as user input//
+/// import java.util.Scanner;
+import java.util.Scanner;
 import java.util.Stack;
 
 public class Stackjava {
     public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
         Solution solution = new Solution();
 
-        // Example input
-        String[] operations = {"5", "2", "C", "D", "+"};
+        // Prompt user for number of operations
+        System.out.print("Enter the number of operations: ");
+        int n = scanner.nextInt();
+        scanner.nextLine(); // Consume the newline character
 
-        // Call the method and print the result
+        // Create an array to store the operations
+        String[] operations = new String[n];
+
+        System.out.println("Enter the operations (use integers, +, D, or C):");
+        for (int i = 0; i < n; i++) {
+            operations[i] = scanner.nextLine();
+        }
+
+        // Calculate and print the total score
         int result = solution.calPoints(operations);
         System.out.println("Total Score: " + result);
     }
@@ -193,21 +244,25 @@ public class Stackjava {
 class Solution {
     public int calPoints(String[] operations) {
         Stack<Integer> stack = new Stack<>();
-        for(String ops : operations){
-            if(ops.equals("+")){
+        for (String ops : operations) {
+            if (ops.equals("+")) {
                 int sum1 = stack.pop();
                 int sum2 = stack.peek();
                 stack.push(sum1);
                 stack.push(sum1 + sum2);
+            } else if (ops.equals("D")) {
+                stack.push(stack.peek() * 2);
+            } else if (ops.equals("C")) {
+                stack.pop();
+            } else {
+                stack.push(Integer.valueOf(ops));
             }
-            else if(ops.equals("D")) stack.push(stack.peek()*2);
-            else if(ops.equals("C")) stack.pop();
-            else {stack.push(Integer.valueOf(ops));}
         }
         int sum = 0;
-        while(!stack.isEmpty()){
+        while (!stack.isEmpty()) {
             sum += stack.pop();
         }
         return sum;
     }
 }
+
